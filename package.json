@@ -1,12 +1,33 @@
-cat > package.json << 'EOF'
 {
   "name": "queet-ai-assistant",
   "version": "1.0.0",
+  "description": "Dynamic AI assistant with dual AI backend (Ollama-only version)",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
   },
+  "keywords": [
+    "ai",
+    "assistant",
+    "task-management",
+    "content-creation",
+    "productivity",
+    "ollama"
+  ],
   "author": "Shronda",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "ollama": "^0.5.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
-EOF
